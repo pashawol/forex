@@ -3,11 +3,11 @@
 mixin mnu()
 	-
 		var nav= {
-			"Инструменты":"#",
-			"Стратегия":"#",
-			"Результаты":"#",
-			"Программа":"#",
-			"Автор":"#", 
+			"Инструменты":"#sWorkingWith",
+			"Стратегия":"#sWhatKnow",
+			"Результаты":"#sHowMush",
+			"Программа":"#sSteps2",
+			"Автор":"#sAuthor", 
 			}
 	+b.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav

@@ -2,6 +2,10 @@ mixin allcss()
 	
 	//- link(rel="stylesheet", href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css")
  
+	link( rel="preload" href="fonts/Geometria-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+	link( rel="preload" href="fonts/Geometria-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+	link( rel="preload" href="fonts/Geometria-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+	link( rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2" crossorigin="anonymous")
 	link(href="css/main.min.css", rel="stylesheet")
 
 mixin allcjs()
@@ -21,6 +25,7 @@ mixin allcjs()
 
 	//- script(src="libs/inputmask/inputmask.min.js")
 	script(src="libs/fslightbox/index.js")
+	//- script(src="js/libs.js")
 	script(src="js/common.js")
 	//- cut text libs
 	//- script(src="libs/jquery.morelines.min.js")

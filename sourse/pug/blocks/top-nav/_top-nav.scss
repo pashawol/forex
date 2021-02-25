@@ -10,7 +10,7 @@
 	 }
 	 @include mt;
 	 &.fixed{
-		 background-color: $body-bg;
+		 background-color: rgba($color: $body-bg, $alpha: .6);
 	 }
 
 }
