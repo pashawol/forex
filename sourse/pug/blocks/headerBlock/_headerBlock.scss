@@ -131,6 +131,9 @@
 	&__caption{
 		border-top: 10px solid $success;
 		padding-top: rem(10);
+		position: relative;
+		z-index: 2;
+		margin-top: -1px;
 		@include media-breakpoint-up(md) {
 			padding-right: rem(70);
 		}
