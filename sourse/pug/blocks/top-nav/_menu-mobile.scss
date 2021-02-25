@@ -1,4 +1,6 @@
+// мобильное меню
 
+// мобильное меню
 $h: em(2);
 
 .toggle-menu-mobile {
@@ -7,9 +9,10 @@ $h: em(2);
 	position: relative;
 	color: $primary;
 	font-size: 32px;
-	width: 1em;
+	width: rem(35);
+
 	&.on {
-		color: #ffffff;
+		//color: #ffffff;
 	}
 
 	span:after,
@@ -47,7 +50,6 @@ $h: em(2);
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;
-		transform-origin: 50% 50%;
 	}
 
 	// &.on {
@@ -63,15 +65,15 @@ $h: em(2);
 
 		top: 0;
 		bottom: 0;
-		
+		transform-origin: 50% 50%;
 	}
 
 	&.on span:before {
-		transform: rotate3d(0,0,1, 45deg);
+		transform: rotate(45deg);
 	}
 
 	&.on span:after {
-		transform: rotate3d(0,0,1, -45deg);
+		transform: rotate(-45deg);
 	}
 }
 
@@ -84,16 +86,12 @@ $h: em(2);
 	top: 0;
 	// left: 0;
 	right: 0;
-	&:not(.active){
-		transform: translate3d(120%, 0,0);
-		opacity: 0;
-
-	}
+	transform: translate(120%, 0);
 	@include mt(.6);
 	will-change: transform;
 
 	&__inner {
-		background-color: #c3c3c3;
+		background-color: $white;
 		padding: rem(20) 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -101,7 +99,9 @@ $h: em(2);
 		height: 100%;
 	}
 
-	&.active { 
+	&.active {
+		transform: translate(0, 0);
+
 		.toggle-menu-mobile {
 			opacity: 1;
 		}
@@ -116,7 +116,8 @@ $h: em(2);
 		left: 0;
 		right: auto;
 		color: #FFF;
-		top: 10px;
+		//top: 10px;
+		top: 4px;
 		z-index: 9999;
 		background-color: transparent;
 
@@ -133,23 +134,72 @@ $h: em(2);
 				background-color: transparent;
 			}
 		}
-	}
 
-	ul {
-		position: relative;
 	}
-
-	li {
+	//logo
+	&__logo{
 		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
+		margin-left: rem(15);
+		margin-bottom: rem(30);
+		width: 50px;
 
-		a {
-			// font-size: 16px;
-
-			padding: 10px;
-			display: block;
-
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
 		}
 	}
+
+	//menu
+	.navMenu{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		display: block;
+		text-align: left;
+
+		//li
+		&__item{
+			padding: 0;
+			@include media-breakpoint-up(lg){
+				margin-right: rem(30);
+			}
+			@include media-breakpoint-up(xl){
+				margin-right: rem(48);
+			}
+
+		}
+		//a
+		&__link{
+			display: block;
+			//height: 100%;
+			text-align: left;
+			padding: rem(8) rem(15);
+
+			color: $body-color;
+
+			font-weight: 600;
+		}
+	}
+
+
+	//ul {
+	//	position: relative;
+	//}
+	//
+	//li {
+	//	display: block;
+	//	margin: 0;
+	//	border-top: 1px solid rgba(255, 255, 255, .13);
+	//
+	//	a {
+	//		// font-size: 16px;
+	//
+	//		padding: 10px;
+	//		display: block;
+	//
+	//	}
+	//}
 }

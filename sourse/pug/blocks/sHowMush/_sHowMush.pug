@@ -1,0 +1,48 @@
+mixin sHowMush(data)
+	// start sHowMush
+	+b.SECTION.sHowMush.section#sHowMush&attributes(attributes)
+		.container
+			+b.section-title
+				h2.text-success Сколько я буду зарабатывать?
+			+e.row.row
+				.col-lg-6
+					p.h6 На&nbsp;любом финансовом рынке попытки ответить на&nbsp;этот вопрос всегда обречены на&nbsp;провал.
+
+					p.h6 Даже совершая одни и&nbsp;те&nbsp;же сделки, просто повторяя друг за&nbsp;другом (а&nbsp;именно так и&nbsp;торгуют большинство участников мастер-группы), у&nbsp;всех участников получаются абсолютно разные результаты.
+
+					.h4 Но&nbsp;главное, что это положительные  результаты!
+				.col-lg-6
+					+e.block
+						.h4  Мы&nbsp;регулярно делимся результатами и&nbsp;отзывами учеников Павла Крёза  в&nbsp;социальных сетях
+						p.fw-500 Смотрите, как участники мастер-группы Павла Крёза делают деньги с&nbsp;самого начала 2020 года в&nbsp;Вашей любимой социальной сети:
+						+e.row-soc.row
+							+e.col-soc.col-auto(href="https://vk.com/pavel.krez" target="_blank")
+								+pic("soc-1.png",'',0)
+							+e.col-soc.col-auto(href="https://www.instagram.com/pavel.krez" target="_blank")
+								+pic("soc-2.png",'',0)
+							+e.col-soc.col-auto(href="#" target="_blank")
+								+pic("soc-3.png",'',0)
+							+e.col-soc.col-auto(href="#" target="_blank")
+								+pic("soc-4.png",'',0)
+							+e.col-soc.col-auto(href="https://t.me/Pavel_Krez" )
+								+pic("soc-5.png",'',0)
+							+e.col-soc.col-auto(href="https://www.facebook.com/PavelKrez.infodvd/" target="_blank")
+								+pic("soc-6.png",'',0)
+			+e.block-dark
+				h2.text-white Всё это целая Книга Успеха
+				.row
+					mixin item(t,p)
+						+e.col.col-lg-3.col-sm-6 
+							+e.title!= t
+							+e.text!= p
+					+item(`Это <br> легко  и&nbsp;доступно`,`Большинство активных учеников уже в&nbsp;первые 1-3 месяца торговли начинали получать ощутимый результат.`)
+					+item(`Малозатратно <br> по <br> времени`,`Собрали портфель, выставили ордера и&nbsp;занимайтесь своими делами`)
+					+item(`Это может повторить каждый`,`Уже более 300 учеников прошли обучение и&nbsp;прямо сейчас продолжают зарабатывать деньги на&nbsp;ОТС`)
+					+item(`Не&nbsp;нужен большой  депозит`,`Чтобы купить одну компанию в&nbsp;портфель достаточно 20-50$. Потенциально она способна принести прибыль 60-2000$.`)
+			.text-center 
+				a.btn.btn-success(href="#") Начать зарабатывать на ОТС прямо сейчас! 
+
+
+
+				
+	// end sHowMush

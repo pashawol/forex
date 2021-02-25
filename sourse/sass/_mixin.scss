@@ -29,6 +29,7 @@
 
 @mixin a-cent($xy:xy) {
   position: absolute;
+
   @if $xy==xy {
     top: 0;
     bottom: 0;
@@ -51,6 +52,7 @@
     margin-bottom: auto;
   }
 }
+
 @mixin a-cent1($xy:xy) {
   @if $xy==xy {
     position: absolute;
@@ -58,7 +60,7 @@
     top: 50%;
     bottom: auto;
     right: auto;
-    transform: translate3d(-50%, -50%,0);
+    transform: translate3d(-50%, -50%, 0);
   }
 
   @else if $xy==x {
@@ -84,11 +86,12 @@
   margin-right: calc(-1 * var(--bs-gutter-x)/ 2);
 
   >* {
-    @if $m== m {
+    @if $m==m {
       margin-left: calc(var(--bs-gutter-x)/2);
       margin-right: calc(var(--bs-gutter-x)/2);
     }
-    @else{
+
+    @else {
 
       padding-left: calc(var(--bs-gutter-x)/2);
       padding-right: calc(var(--bs-gutter-x)/2);
@@ -101,7 +104,7 @@
   margin-right: auto;
   max-width: $w;
 }
- 
+
 
 @mixin bgs($w: center, $h: center) {
   background-size: cover;
@@ -161,14 +164,15 @@
 // масштвбирование блока пропорционально
 @mixin block($w: 1, $h: 1) {
   display: block;
-  position: relative; 
+  position: relative;
   --ratio: calc(#{$h}/#{$w});
-  &::before { 
+
+  &::before {
     content: '';
     position: relative;
     height: 0;
     display: block;
-    padding-block-end: calc(var(--ratio) * 100%);
+    padding-bottom: calc(var(--ratio) * 100%);
   }
 }
 
@@ -198,13 +202,13 @@
   --w: #{$width};
   position: relative;
   width: var(--w);
-  inset-inline-start: calc(-1 * (var(--w) - 100%) / 2);
+  left: calc(-1 * (var(--w) - 100%) / 2);
 }
 
 @mixin tear-drop() {
   position: static;
   width: 100%;
-  inset-inline-start: unset;
+  left: unset;
 }
 
 @mixin ell($n: 3) {
@@ -215,5 +219,3 @@
   position: relative;
   overflow: hidden;
 }
-
- 

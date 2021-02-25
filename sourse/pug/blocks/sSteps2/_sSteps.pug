@@ -1,0 +1,100 @@
+mixin sSteps2(data)
+	// start sSteps2
+	+b.SECTION.sSteps2.section#sSteps&attributes(attributes)
+		.container
+			+b.section-title
+				h2.text-success Как стать участником тренинга Инфо-ДВД и&nbsp;Павла Крёза &laquo;Трейдинг акциями рынка ОТС&raquo;?
+			+e.row.row
+				+e.step.col-xl-4 Оставьте заявку на&nbsp;участие. Заполните форму и&nbsp;нажмите кнопку &laquo;Продолжить&raquo;.
+				+e.step.col-xl-4 Вам откроется страница с&nbsp;тарифами и&nbsp;доступными сейчас скидками
+				+e.step.col-xl-4 Если необходимо, Вас проконсультирует менеджер Инфо-ДВД по&nbsp;указанному Вами номеру телефона
+				+e.step.col-xl-4 Выберите тариф участия, оплатите его стоимость
+				+e.step.col-xl-4.offset-xl-4 Уже через одну минуту после оплаты Вам откроется доступ в&nbsp;закрытый раздел группы тренинга с&nbsp;обучающими материалами
+			+form()
+	// end sSteps
+
+mixin form()
+	#bf278.inbfrm.v2
+		#bf278_inner
+			.title.d-none
+				| &Vcy;&acy;&shcy;&icy; &dcy;&acy;&ncy;&ncy;&ycy;&iecy;
+			form(id="bf278_form" action="//info-dvd.ru/bbm/order/otcspeculationentry/?bform_id=278" method="POST" accept-charset="windows-1251" onsubmit="return bf278.check();")
+				+b.form
+					+e.block
+						.row 
+							.col-4.align-self-end.d-none.d-xl-block
+								+pic("man-form.png",'',0)
+							.col-sm
+								.h2.fw-900.text-success.ttu Успейте оставить заявку на участие в тренинге
+								.h6.mb-4  Введите свои данные прямо&nbsp;сейчас 
+							.col-sm
+								+e.inputs
+									//link(href='//info-dvd.ru/bbm/css/bbm_form.css?20201029' rel='stylesheet' type='text/css')
+									<input type="hidden" name="good_id" value="otcspeculationentry">
+									<input type="hidden" name="bform_id" value="278">
+									<input type="hidden" name="comment_author" value="">
+									<input type="hidden" name="comment_text" value="">
+									.input_line.input-wrap
+										input.form-control.text(name='fullname' type='text' value='' placeholder='Ваше имя' required='required')
+									.input_line.input-wrap
+										input.form-control.text(name='phone' type='tel' value='' placeholder='+7 ( ____ ) ____ - ___ - ___' required='required')
+									.input_line.input-wrap
+										input.form-control.text(name='email' type='email' value='' placeholder='E-mail (необязательно)' required='required')
+									.submit_line.input-wrap
+										input.form-control.button.btn.btn-success.w-100(type='submit' name='submit' value='Отправить')
+									script(type='text/javascript').
+										(function (d, w, src, r, c) {
+											var rid = r.toString().substr(2);
+											var n = d.getElementsByTagName("script")[0], s = d.createElement("script"),
+															f = function () {
+																n.parentNode.insertBefore(s, n);
+															};
+											var p = d.location.protocol;
+											if (p != 'http:' && p != 'https:' && src.indexOf('//') == 0) {
+												src = 'http:' + src
+											}
+											s.type = "text/javascript";
+											s.async = true;
+											s.src = src + (src.indexOf('?') == -1 ? '?' : '&') + 'r=' + rid;
+											if (w.opera == "[object Opera]") {
+												d.addEventListener("DOMContentLoaded", f, false);
+											} else {
+												f();
+											}
+											if (c) {
+												s.addEventListener('load', function (e) {
+													c(null, e);
+												}, false);
+											}
+										})(document, window, "//info-dvd.ru/bbm/js/bbm_form.js", Math.random(), function () {
+											window['bf278'] = new BbmFormMng({
+												id: 'bf278',
+												langs: {
+													errors: {
+														email_pattern: 'Введите корректный адрес электронной почты.',
+														alphanumeric_pattern: 'Может содержать только маленькие английские буквы и цифры',
+														phone_pattern: 'Некорректный формат телефона',
+														zip_pattern: 'Некорректный формат почтового индекса',
+														empty_field: 'Это поле необходимо заполнить.',
+														min_limit: 'Укажите значение не меньше ',
+														oferta_warn: 'Необходимо согласиться с условиями публичной оферты!'
+													},
+													processing: 'Обработка...'
+												}, rules: {
+													kupon: ['alphanumeric'],
+													phone: ['phone', 'required'],
+													email: ['required', 'email'],
+													fullname: ['required']
+												},
+												phone_verification: true
+											});
+										});
+					//-polite
+					+e.polite.text-center.text-white
+						.privacy_agreement_block
+							label
+								input(type='checkbox' name='oferta_warn' value='1' checked='checked' required='required')
+								span.ibfm_txt &YAcy; &scy;&ocy;&gcy;&lcy;&acy;&scy;&iecy;&ncy; &scy; &ucy;&scy;&lcy;&ocy;&vcy;&icy;&yacy;&mcy;&icy;
+								span
+									| 
+								a.text-white(href='javascript:void(0)' onclick="return window['bf278'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;") &pcy;&ucy;&bcy;&lcy;&icy;&chcy;&ncy;&ocy;&jcy; &ocy;&fcy;&iecy;&rcy;&tcy;&ycy;

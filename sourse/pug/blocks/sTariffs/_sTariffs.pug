@@ -1,0 +1,133 @@
+mixin sTariffs()
+	// start sTariffs
+	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
+		+e.bg
+		+e.bg-img--1
+			img(loading="lazy" src="img/svg/tarif-top-bg.svg" alt="")
+		+e.bg-img--2
+			img(loading="lazy" src="img/svg/tarif-bot-bg.svg" alt="")
+		.container
+			+b.section-title
+				h1
+					| Выберите удобный пакет
+					|
+					br.d-none.d-sm-block
+					span участия в тренинге
+			+e.table-wrap
+				table 
+					thead 
+						tr
+							th(scope="col") 
+							th(scope="col") Эконом
+							th(scope="col") Мастер-3
+							th(scope="col") Мастер-6
+							th(scope="col") Мастер-12
+							th(scope="col") VIP
+					tbody 
+						mixin tr(data)
+							tr&attributes(attributes)
+								th(scope="row")
+									+e.tr-title!= data.t1
+									block 
+								td(data-title="Эконом" class= data.t2Class)!= data.t2
+								td(data-title="Мастер-3" class= data.t3Class)!= data.t3 
+								td(data-title="Мастер-6" class= data.t4Class)!= data.t4 
+								td(data-title="Мастер-12" class= data.t5Class)!= data.t5 
+								td(data-title="VIP" class= data.t6Class)!= data.t6
+						+tr({
+							t1:`I&nbsp;часть. Основная программа тренинга. Безлимитный доступ к&nbsp;материалам`,
+							t2:`+`,
+							t3:`+`,
+							t4:`+`,
+							t5:`+`,
+							t6:`+`
+							})
+						+tr({
+							t1:`II&nbsp;часть. Онлайн-занятия тренинга. Доступ на&nbsp;прямой эфир и&nbsp;безлимитный доступ к&nbsp;записям занятий.`,
+							t2:`+`,
+							t3:`+`,
+							t4:`+`,
+							t5:`+`,
+							t6:`+`
+							})
+								.pt-3.text-success Бонус&nbsp;&mdash; записи онлайн-занятий тренинга 2020&nbsp;года.
+						+tr({
+							t1:`Поддержка и&nbsp;обратная связь от&nbsp;автора в&nbsp;группе и&nbsp;на&nbsp;онлайн-занятиях`,
+							t2:`2 недели`,
+							t3:`В мастер-группе`,
+							t4:`В мастер-группе`,
+							t5:`В мастер-группе`,
+							t6:`В мастер-группе`
+							})
+						+tr({
+							t1:`Доступ в&nbsp;мастер-группу <span>Павла Крёза</span>`,
+							t2:`-`,
+							t3:`3 месяца`,
+							t4:`6 месяцев`,
+							t5:`12 месяцев`,
+							t6:`12 месяцев`
+							})
+						+tr({
+							t1:`Продление мастер-группы  по&nbsp;льготной стоимости`,
+							t2:`-`,
+							t3:`+`,
+							t4:`+`,
+							t5:`+`,
+							t6:`-`
+							})
+						+tr({
+							t1:`Индивидуальные скайп-сессии с&nbsp;автором после окончания программы`,
+							t2:`-`,
+							t3:`-`,
+							t4:`-`,
+							t5:`-`,
+							t6:`6 сессий`,
+							t6Class: "fz-normall"
+							})
+						+tr({
+							t1:`Индивидуальная поддержка  от&nbsp;автора в&nbsp;скайпе`,
+							t2:`-`,
+							t3:`-`,
+							t4:`-`,
+							t5:`-`,
+							t6:`6 сессий`,
+							t6Class: "fz-normall"
+							})
+						
+						+tr({
+							t1:`Базовая цена  <span>пакета</span>`,
+							t2:`34 000`,
+							t3:`42 000`,
+							t4:`46 000`,
+							t5:`52 000`,
+							t6:`180 000`
+							}).old-price
+						+tr({
+							t1:`Базовая цена  <span>пакета</span>`,
+							t2:`22 000`,
+							t3:`30 000`,
+							t4:`34 000`,
+							t5:`40 000`,
+							t6:`99 000`
+							}).new-price
+						tr
+							th(scope="row") 
+							td: +e.btn(href="#") Выбрать 
+							td: +e.btn(href="#") Выбрать 
+							td: +e.btn(href="#") Выбрать 
+							td: +e.btn(href="#") Выбрать 
+							td: +e.btn(href="#") Выбрать 
+
+			+e.timer-row.row
+				.col-lg-6
+					+e.timer-headline ПОЛУЧИТЕ ДОСТУП ПРЯМО СЕЙЧАС!
+					+e.timer-txt Доступ к материалам I части тренинга будет открыт Вам через одну минуту после оплаты.
+				+e.timer-col.col
+					+e.timer-top-txt
+						p Все материалы тренинга уже выложены в&nbsp;удобном для изучения виде в&nbsp;закрытом разделе группы.
+
+						p 	А&nbsp;в&nbsp;мастер-группе Павла Крёза Вы&nbsp;получите целый набор готовых решений для быстрого старта, поддержку, чат участников, модули с&nbsp;аналитикой по&nbsp;компаниям и&nbsp;со&nbsp;сделками Павла Крёза&nbsp;и, конечно&nbsp;же, онлайн-занятия с&nbsp;актуальной информацией по&nbsp;рынку ОТС. 
+
+						p Начните свое обучение прямо сейчас и&nbsp;перейдите к&nbsp;реальной практике на&nbsp;ОТС уже в&nbsp;этом месяце!
+					
+	// end sTariffs

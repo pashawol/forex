@@ -1,10 +1,21 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+	+b.headerBlock.bg-wrap#headerBlock&attributes(attributes)
+		+pic("head-bg.png").picture-bg
+		.container.section 
+			h1 Доступный каждому  источник дохода
+			+e.sub-title Трейдинг акциями рынка ОТС с&nbsp;Павлом Крёзом
+			ul 
+				li Вход от 100$
+				li Достаточно 15 минут в день
+				li Можно начать прямо сегодня
+				li Доступное обучение с практикой
+				li Проверено и подтверждено учениками и временем
+				li Кратное умножение денег в сделках
+			a.btn.btn-success(href="#") Стартовать прямо сейчас! 
+			+b.man-block 
+				+pic('man.png')
+				+e.caption
+					+e.title Павел крез
+					+e.text Эксперт в трейдинге
 	// end headerBlock

@@ -1,0 +1,123 @@
+
+	// start .sWhatKnow
+	.sWhatKnow {
+		// --sPT: ;
+		// --sPB: ;
+			@include media-breakpoint-up(md) {
+				--sTPB: 70px;
+			}
+		position: relative;
+		z-index: 2;
+		&::before{
+			content: '';
+			position: absolute;
+			bottom: 50%;
+			height: 50%;
+			left: 0;
+			width: 100%;
+		background: #ECECEC;
+		z-index: -1;
+		}
+		.container{
+			position: relative;
+			// z-index: 2;
+			&::before,
+			&::after{
+				content: url(../img/@2x/webp/sWhatKnow-start.webp);
+				position: absolute;
+				z-index: -1;
+				top: 30%;
+			}
+			&::before{
+				left: -100px;
+			}
+			&::after{ 
+				right: -100px;
+			}
+		}
+		.row{
+			position: relative;
+			z-index: 2;
+		}
+		&__item{
+			@include media-breakpoint-up(sm) {
+				padding: rem(30) rem(40);
+			}
+			padding: rem(30) rem(20);
+			background: #FFFFFF;
+			min-height: calc(100% - var(--bs-gutter-x));
+			margin-block-end: var(--bs-gutter-x);
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: var(--bg, var(--bs-success));
+				top: var(--top, 32px);
+				left: var(--left, -32px);
+				z-index: -1;
+			}
+			
+
+			/* 12 */
+
+			box-shadow: 0px 29px 100px rgba(0, 0, 0, 0.25);
+			.icon{
+				font-size: rem(54);
+				color: $success;
+				flex:  0 0 auto;
+				margin-right: rem(24);
+			}
+		}
+
+			&__col:nth-child(2) {
+				--bg: #{$primary};
+				--top: -32px;
+				--left: 32px;
+			}
+
+		&__item-head{
+			display: flex;
+			align-items: center;
+			@extend .h4;
+			margin-bottom: 1rem;
+			font-weight: bold;
+			// max-width: rem(400);
+
+		}
+		&__title-sub{
+			color: #565656;
+			font-weight: 500;
+			margin-block-end: rem(34);
+		}
+		table{
+			margin-bottom: rem(34);
+		}
+		td{
+			padding-bottom: 1rem;
+			vertical-align: top;
+			&:first-child{
+				white-space: nowrap;
+				padding-right: 1rem;
+			}
+		}
+		.btn{
+			font-size: rem(18);
+			margin-block-start: auto;
+		}
+		
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sWhatKnow

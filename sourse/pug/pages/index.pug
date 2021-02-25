@@ -3,10 +3,27 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sPublish/_sPublish.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sWorkingWith/_sWorkingWith.pug
+include ../blocks/sWhatKnow/_sWhatKnow.pug
+include ../blocks/sMakingMoney/_sMakingMoney.pug
+include ../blocks/sHowMush/_sHowMush.pug
+include ../blocks/sNUmbers/_sNUmbers.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sTimeOfCrisis/_sTimeOfCrisis.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sAuthor/_sAuthor.pug
+include ../blocks/sSteps2/_sSteps.pug 
+include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sTrust/_sTrust.pug
+include ../blocks/sReady/_sReady.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
 	- let  title= 'title'
@@ -14,15 +31,40 @@ block title
 block pagecontent
 
 	+mob-mnu()
-	+header()
-	+top-nav()
-	+soc()
-	+in-c("checkbox", "text")
+	//- header.header-block
+	header.header
+		+top-nav()
+		+headerBlock()
+		+sWhy
+	+sPublish
+	+sWhat
+	+sWorkingWith
+	+sWhatKnow
+	+sMakingMoney
+	+sHowMush
+	+sNUmbers
+	+sHowWork
+	+sTimeOfCrisis
+	+sSteps
+	+sAuthor
+	.container
+		h4.text-success.pb-5 Об этом говорят их многочисленные отзывы
+		+carusel('rew-1','rew-2','rew-3','rew-4','rew-5','rew-6','rew-7','rew-8','rew-9','rew-10','rew-11','rew-12','rew-13','rew-14')
+	.section.container 
+		.section-title 
+			h2.text-success Публичные сделки <br> Павла Крёза
+		.col-xl-10
+			p.h6.mb-3 С 2019 года Павел Крёз ведет публичную торговлю в реальном времени.
+			p.h6.mb-5 Вот архив зафиксированных личных сделок Павла, обратите внимание на результаты (выделены зеленым и красным цветом). Каждая из этих сделок открывалась и закрывалась публично, на глазах у более 300 участников мастер-группы, которые тоже в них участвовали.
 
-	+topLine() 
-	+headerBlock()
-	+sForm()
-	+sContact()
+		+carusel('order-1','order-2','order-3','order-4','order-5','order-6','order-7','order-8','order-9','order-10','order-11','order-12')
+		.text-center
+			+btn("#",'Хочу зарабатывать на ОТС в команде Павла Крёза! ')
+	+sWhatYouGet
+	+sSteps2
+	+sQuestions 
+	+sTrust
+	+sReady
 	+footer()
 
 

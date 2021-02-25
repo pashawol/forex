@@ -1,0 +1,25 @@
+mixin sWhat(data)
+	// start sWhat
+	+b.SECTION.sWhat.section#sWhat&attributes(attributes)
+		.container
+			+b.section-title
+				h2.text-success Что такое ОТС?
+				
+			.row
+				.col-xl-6
+					+e.text-wrap
+						+e.text OTC – американский внебиржевой фондовый рынок, на котором торгуются акции стартапов и недорогих компаний
+						+pic("what-img.jpg",'',0)
+				.col
+					p.h6 OTC расшифровывается как Over-the-Counter, в&nbsp;дословном переводе&nbsp;&mdash; минуя прилавок. Это легальный рынок, на&nbsp;котором акции покупаются и&nbsp;продаются вне юрисдикций крупных фондовых бирж (таких как NYSE и&nbsp;NASDAQ).
+
+					p.h6 Роль биржи, а&nbsp;точнее площадки для торгов здесь выполняет OTC Markets Group&nbsp;&mdash; внебиржевая система торгов акциями. Это электронная система, которая отражает котировки брокеров/дилеров для ценных бумаг внебиржевого рынка
+					.h4.strong Как осуществляется выход на&nbsp;внебиржевой рынок?
+					p Точно также, как и&nbsp;на&nbsp;обычную биржу&nbsp;&mdash; с&nbsp;помощью лицензированного брокера. Мы&nbsp;работаем с&nbsp;Interactive Brokers&nbsp;&mdash; один из&nbsp;крупнейших международных брокеров с&nbsp;низкими комиссиями на&nbsp;ОТС и&nbsp;страховкой депозита от&nbsp;нерыночных рисков на&nbsp;500 000$.
+				+e.foot.row.mx-0
+					+e.foot-col-auto.col-auto Важно! 
+					+e.foot-col.col-lg
+						+e.foot-text OTC&nbsp;&mdash; это полностью легальный рынок, подпадающий под надзор строгих государственных регуляторов.
+						img(src="img/svg/gerb.svg", alt="")
+					
+	// end sWhat

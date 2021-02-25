@@ -1,0 +1,164 @@
+// start .sConsult
+.sConsult {
+	--sPT: #{rem(60px)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(110px)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(53px)};
+	}
+
+	.container{
+		@include media-breakpoint-up(xl){
+			padding-left: 10px;
+		}
+	}
+
+	color: $white;
+	position: relative;
+	z-index: 1;
+	&__section-bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(332.05deg, #CDEAE5 19.87%, #E4F1FF 92.7%);
+
+		clip-path: polygon(0 1.2%, 100% 0, 100% 100%, 0 100%);
+		@include media-breakpoint-up(lg){
+			clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+	.section-title{
+		h2{
+			margin-bottom: rem(24);
+
+			font-size: rem(24);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(36);
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(40);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(50);
+			}
+
+			span{
+				// color: $light-green;
+			}
+		}
+		p{
+			line-height: 1.7;
+
+			font-size: rem(18px);
+			@include media-breakpoint-up(lg){
+				font-size: rem(20px);
+			}
+		}
+	}
+	//row
+	&__row{
+		@include media-breakpoint-up(lg){
+			@include roww(0px);
+		}
+
+		@include media-breakpoint-up(xxl){
+			width: 108%;
+		}
+	}
+	&__question-col{
+		padding-bottom: rem(20);
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(sm){
+			display: block;
+			padding-bottom: rem(30);
+		}
+
+
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(62px);
+		}
+
+	}
+	&__col-img{
+		margin-right: 15px;
+		width: 90px;
+		@include media-breakpoint-up(sm){
+			width: auto;
+			margin-bottom: rem(16);
+			margin-right: 0;
+		}
+
+		height: 90px;
+		display: flex;
+		align-items: center;
+
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__col-txt{
+		br{
+			display: none;
+			@include media-breakpoint-up(sm){
+				display: block;
+			}
+		}
+
+		line-height: 1.5;
+
+		font-size: rem(16px);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20px);
+		}
+	}
+	//lower txt
+	&__lower-txt{
+		max-width: 1007px;
+		p{
+			line-height: 1.7;
+
+			font-size: rem(18px);
+			@include media-breakpoint-up(lg){
+				font-size: rem(20px);
+			}
+
+			margin-bottom: rem(30px);
+		}
+
+		p:last-child{
+			margin-bottom: 0;
+		}
+
+		padding-bottom: rem(40);
+		@include media-breakpoint-up(md){
+			padding-bottom: rem(115px);
+		}
+	}
+
+	//
+	.form-cont{
+		&__form-txt{
+			@include media-breakpoint-down(lg){
+				max-width: 100%;
+			}
+		}
+	}
+
+	.form{
+		color: $body-color;
+		&__polite{
+			color: $white;
+			a{
+				color: $white;
+			}
+		}
+	}
+} // end.sConsult

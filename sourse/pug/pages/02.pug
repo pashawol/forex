@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sSreious/_sSreious.pug
+//- include ../blocks/sTicket/_sTicket.pug
+//- include ../blocks/sRepresent/_sRepresent.pug
+//- include ../blocks/sHow/_sHow.pug
+//- include ../blocks/sThink/_sThink.pug
+//- include ../blocks/sWay/_sWay.pug
+//- include ../blocks/sMaster/_sMaster.pug
+//- include ../blocks/sSlider/_sSlider.pug
+//- include ../blocks/sProgramm/_sProgramm.pug
+//- include ../blocks/sNext/_sNext.pug
+//- include ../blocks/sEducation/_sEducation.pug
+//- include ../blocks/sResult/_sResult.pug
+//- include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sGoldenLevel/_sGoldenLevel.pug
+//- include ../blocks/sEnd/_sEnd.pug
+
+include ../blocks/sConsult/_sConsult.pug
+include ../blocks/sHaveQuestions/_sHaveQuestions.pug
+include ../blocks/sTariffs/_sTariffs.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	header.header
+		+sTariffs()
+		+sHaveQuestions
+	+footer()

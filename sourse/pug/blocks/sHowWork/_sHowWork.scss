@@ -1,0 +1,65 @@
+
+	// start .sHowWork
+	.sHowWork {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		background: #ECECEC;
+
+		.row{
+			z-index: 2;
+			position: relative;
+		}
+		.pic-1{
+			position: absolute;
+			right: -20%;
+			top: 0;
+			z-index: -1;
+			width: auto;
+		}
+
+
+			counter-reset: num;
+
+			&__item {
+				position: relative;
+				padding: rem(40) rem(56);
+				font-size: rem(20);
+				z-index: 2;
+				background-color: #fff;
+				min-height: calc(100% - 40px);
+				margin-bottom: 40px;
+				&::before {
+					content: counter(num);
+					counter-increment: num;
+					position: absolute;
+					right: rem(20);
+					bottom: em(-2.8);
+					color: #2D8B7D;
+					opacity: 0.3;
+					font-weight: 900;
+					position: absolute;
+					z-index: -1;
+					@include rfs(380px);
+					line-height: 1;
+				}
+			}
+		 
+			.pic-2{
+				border-left: 8px solid #fff;
+			}
+			.fw-500.h6{
+				line-height: 140%; 
+				color: #1E1E1E;
+			}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sHowWork

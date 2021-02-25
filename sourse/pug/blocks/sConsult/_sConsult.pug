@@ -1,0 +1,52 @@
+mixin sConsult(data)
+	// start sConsult
+	+b.SECTION.sConsult.section#sConsult&attributes(attributes)
+		+e.section-bg
+			img.lazy(src="#" data-src="img/@2x/sQuestions-bg.jpg" alt="")
+		.container
+			+b.section-title
+				h2
+					| Есть вопросы
+					|
+					br.d-none.d-md-block
+					span и нужна консультация?
+				p Мы готовы перезвонить Вам и ответить на любые вопросы:
+			+e.row.row
+				+questionItem(1)
+					| по программе
+					br
+					| тренинга
+				+questionItem(2)
+					| по техническим
+					|
+					br
+					| моментам
+				+questionItem(3)
+					| по вопросам оплаты
+					br
+					| и участия
+			+e.lower-txt
+				p
+					| Даже, если у&nbsp;Вас возник какой-то особенный или трудный вопрос!
+					|
+					br.d-none.d-xl-block
+					| В&nbsp;этом случае обязательно заказывайте консультацию. Это&nbsp;&mdash; совершенно бесплатно!
+					|
+					br.d-none.d-xl-block
+					| Мы&nbsp;сможем квалифицированно ответить на&nbsp;любой Ваш вопрос о&nbsp;тренинге и&nbsp;найти пути решения даже для личных ситуаций!
+				p
+					| Если у&nbsp;Вас возникли сложности с&nbsp;оплатой, мы&nbsp;можем подобрать для Вас вариант рассрочки.
+					|
+					br.d-none.d-xl-block
+					| Условия рассрочки согласовываются и&nbsp;подбираются индивидуально, свяжитесь с&nbsp;менеджером Инфо-ДВД, чтобы обсудить возможные варианты оплаты участия.
+				p
+					| Чтобы заказать звонок специалиста Инфо-ДВД, введите свои данные в&nbsp;форму ниже. Наши менеджеры в&nbsp;самый короткий срок перезвонят Вам по&nbsp;указанному номеру телефона.
+			+form()
+	// end sConsult
+
+mixin questionItem(imgNum)
+	+e.question-col.col-sm-4
+		+e.col-img
+			img(loading="lazy" src=`img/svg/sConsult-${imgNum}.svg` alt="")
+		+e.col-txt
+			block

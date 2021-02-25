@@ -1,0 +1,56 @@
+
+	// start .sPublish
+	.sPublish {
+		--sPT: #{rem(120)};
+		// --sPB: ;
+		--sTPB: #{rem(25)};
+		h2{
+			 
+			color: $success;
+			max-width: rem(750);
+		}
+		li{
+			font-weight: 500;
+		}
+		ul{
+			padding-top: rem(50);
+			// padding-bottom: 0;
+		}
+		
+		&__text{
+			max-width: rem(410);
+			padding: rem(44) rem(28) 0 rem(37);
+			color: #fff;
+			background-color: $primary;
+			@extend .h4;
+			font-weight: bold;
+			@include media-breakpoint-up(lg) {
+
+				margin-right: rem(-40);
+			}
+			picture{
+				box-shadow: 0px 29px 100px rgba(0, 0, 0, 0.25);
+				position: relative;
+				right: rem(-40 - 28);
+				bottom: rem(-40);
+				margin-top: rem(-10);
+				width: auto;
+			}
+		}
+		.btn{
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+			}
+				margin-bottom: rem(40);
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sPublish
