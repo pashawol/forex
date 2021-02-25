@@ -21,19 +21,19 @@
 		.container{
 			position: relative;
 			// z-index: 2;
-			&::before,
-			&::after{
-				content: url(../img/@2x/webp/sWhatKnow-start.webp);
-				position: absolute;
-				z-index: -1;
-				top: 30%;
-			}
-			&::before{
-				left: -100px;
-			}
-			&::after{ 
-				right: -100px;
-			}
+			// &::before,
+			// &::after{
+			// 	content: url(../img/@2x/webp/sWhatKnow-start.webp);
+			// 	position: absolute;
+			// 	z-index: -1;
+			// 	top: 30%;
+			// }
+			// &::before{
+			// 	left: -100px;
+			// }
+			// &::after{ 
+			// 	right: -100px;
+			// }
 		}
 		.row{
 			position: relative;
